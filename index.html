@@ -15,6 +15,24 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Natours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+            </ul>
+        </div>
+    </div>
+
+
     <header class="header">
         <div class="header__logo-box">
             <img src="./img/logo-white.png" alt="logo" class="header__logo">
@@ -28,7 +46,7 @@
                     is where life happens
                 </span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
 
     </header>
@@ -108,7 +126,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -140,7 +158,7 @@
                                 <div class="card__price-box">
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +188,7 @@
                                 <div class="card__price-box">
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$497</p>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +218,7 @@
                                 <div class="card__price-box">
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$897</p>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -289,12 +307,74 @@
                                 <input type="email" class="form__input" placeholder="Email Address" id="email" required>
                                 <label for="email" class="form__label">Email Adress</label>
                             </div>
+
+                            <div class="form__group u-margin-bottom-medium">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>Small tour group</label>
+                                </div>
+
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>Large tour group</label>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <button class="btn btn--green">Next step &rarr;</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact Us </a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Keitha Noel-Louis</a> Designed by <a href="#"
+                        class="footer__link">Jonas Schmedtmann.</a> Copyright &copy; by Jonas Schmedtmann.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo">
+                <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                    Important &ndash; Please read these terms before booking
+                </h3>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quis delectus autem mollitia ad. Rem cupiditate molestias, delectus in vero beatae numquam, non cumque quod, omnis vitae tempora corrupti nihil?Lorem ipsum dolor sit amet consectetur adipisicing elit. Et autem deleniti illum esse dolores ducimus, velit corporis culpa. Dolor eum commodi ab iste consequatur? Adipisci iusto ea ratione deserunt ut placeat, quos et quam amet architecto perferendis! Officiis, consequatur numquam corporis delectus, ducimus molestias praesentium tempora debitis cupiditate mollitia expedita fugit est, quas esse repudiandae quam earum nisi doloremque veritatis sapiente consequuntur accusantium veniam. 
+                </p>
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
     <!--
         <section class="grid-test">
 
